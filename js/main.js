@@ -290,7 +290,7 @@ function createListItem(article){
                             </li>`  
     return  listItemTemplate;
 }
-
+/*funcion que imprime el aside derecho*/
 function printAside(){
     let posts = bringPosts();
     console.log(posts)
@@ -312,3 +312,11 @@ function printAside(){
         $('#helpPost').append(createListItem(post));
     })
 }
+
+/*manejador del boton de hamburguesa*/
+$('#openNav').on('click',function(){
+    $('#sidebar').removeClass('d-none');
+})
+$('#closeNav').on('click',function(){
+    $('#sidebar').addClass('d-none');
+})
